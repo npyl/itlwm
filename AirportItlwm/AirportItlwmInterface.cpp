@@ -8,6 +8,8 @@
 
 #include "AirportItlwmInterface.hpp"
 
+#include "CrashFix.hpp"
+
 #define super IO80211Interface
 OSDefineMetaClassAndStructors(AirportItlwmInterface, IO80211Interface);
 
@@ -32,19 +34,16 @@ init(IO80211Controller *controller, ItlHalService *halService)
     return true;
 }
 
-UInt32 AirportItlwmInterface::
-inputPacket(mbuf_t packet, UInt32 length, IOOptionBits options, void *param)
+UInt32
+AirportItlwmInterface::inputPacket(mbuf_t packet, UInt32 length, IOOptionBits options, void *param)
 {
-    ether_header_t *eh;
-    size_t len = mbuf_len(packet);
-    
-    eh = (ether_header_t *)mbuf_data(packet);
-    if (len >= sizeof(ether_header_t) && eh->ether_type == htons(ETHERTYPE_PAE)) { // EAPOL packet
-        const char* dump = hexdump((uint8_t*)mbuf_data(packet), len);
-        XYLog("input EAPOL packet, len: %zu, data: %s\n", len, dump ? dump : "Failed to allocate memory");
-        if (dump)
-            IOFree((void*)dump, 3 * len + 1);
-        return IO80211Interface::inputPacket(packet, (UInt32)len, 0, param);
+    mbuf_t p2 = ensure_pkthdr(packet);
+    if (!p2) {
+        // Return length to indicate "consumed" even though dropped
+        // (prevents potential resend/looping behavior in some paths)
+        return length;
     }
-    return IOEthernetInterface::inputPacket(packet, length, options, param);
+
+    UInt32 newLen = (UInt32)mbuf_total_len(p2);
+    return IOEthernetInterface::inputPacket(p2, newLen, options, param);
 }

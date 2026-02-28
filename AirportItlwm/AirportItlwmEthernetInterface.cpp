@@ -8,6 +8,8 @@
 
 #include "AirportItlwmEthernetInterface.hpp"
 
+#include "CrashFix.hpp"
+
 #include <sys/_if_ether.h>
 #include <net80211/ieee80211_var.h>
 
@@ -96,15 +98,13 @@ extern const char* hexdump(uint8_t *buf, size_t len);
 UInt32 AirportItlwmEthernetInterface::
 inputPacket(mbuf_t packet, UInt32 length, IOOptionBits options, void *param)
 {
-    ether_header_t *eh;
-    size_t len = mbuf_len(packet);
-    
-    eh = (ether_header_t *)mbuf_data(packet);
-    if (len >= sizeof(ether_header_t) && eh->ether_type == htons(ETHERTYPE_PAE)) { // EAPOL packet
-        const char* dump = hexdump((uint8_t*)mbuf_data(packet), len);
-        XYLog("input EAPOL packet, len: %zu, data: %s\n", len, dump ? dump : "Failed to allocate memory");
-        if (dump)
-            IOFree((void*)dump, 3 * len + 1);
+    mbuf_t p2 = ensure_pkthdr(packet);
+    if (!p2) {
+        // Return length to indicate "consumed" even though dropped
+        // (prevents potential resend/looping behavior in some paths)
+        return length;
     }
-    return IOEthernetInterface::inputPacket(packet, length, options, param);
+
+    UInt32 newLen = (UInt32)mbuf_total_len(p2);
+    return IOEthernetInterface::inputPacket(p2, newLen, options, param);
 }

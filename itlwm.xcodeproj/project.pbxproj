@@ -312,6 +312,18 @@
 		35CBE787251CB8CA00435CBC /* AirportItlwm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F89B6BBD25021C9C000F77FF /* AirportItlwm.cpp */; };
 		35CBE788251CB8CA00435CBC /* AirportVirtualIOCTL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F89B6BDE25022FB5000F77FF /* AirportVirtualIOCTL.cpp */; };
 		35CBE789251CB8CA00435CBC /* AirportAWDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F89B6BE025022FC7000F77FF /* AirportAWDL.cpp */; };
+		4BBCB4942F53433900B07F4B /* CrashFix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCB4922F53433900B07F4B /* CrashFix.cpp */; };
+		4BBCB4952F53433900B07F4B /* CrashFix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BBCB4932F53433900B07F4B /* CrashFix.hpp */; };
+		4BBCB4962F53433900B07F4B /* CrashFix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCB4922F53433900B07F4B /* CrashFix.cpp */; };
+		4BBCB4972F53433900B07F4B /* CrashFix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BBCB4932F53433900B07F4B /* CrashFix.hpp */; };
+		4BBCB4982F53433900B07F4B /* CrashFix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCB4922F53433900B07F4B /* CrashFix.cpp */; };
+		4BBCB4992F53433900B07F4B /* CrashFix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BBCB4932F53433900B07F4B /* CrashFix.hpp */; };
+		4BBCB49A2F53433900B07F4B /* CrashFix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCB4922F53433900B07F4B /* CrashFix.cpp */; };
+		4BBCB49B2F53433900B07F4B /* CrashFix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BBCB4932F53433900B07F4B /* CrashFix.hpp */; };
+		4BBCB49C2F53433900B07F4B /* CrashFix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BBCB4932F53433900B07F4B /* CrashFix.hpp */; };
+		4BBCB49D2F53433900B07F4B /* CrashFix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCB4922F53433900B07F4B /* CrashFix.cpp */; };
+		4BBCB49E2F53433900B07F4B /* CrashFix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBCB4922F53433900B07F4B /* CrashFix.cpp */; };
+		4BBCB49F2F53433900B07F4B /* CrashFix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BBCB4932F53433900B07F4B /* CrashFix.hpp */; };
 		5088ECBD252884870068A63D /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5088ECBC252884870068A63D /* libkmod.a */; };
 		5088ECBE252884A30068A63D /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5088ECBC252884870068A63D /* libkmod.a */; };
 		5088ECBF252884AF0068A63D /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5088ECBC252884870068A63D /* libkmod.a */; };
@@ -1145,6 +1157,8 @@
 		35CBE6BA251CB89700435CBC /* AirportItlwm.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportItlwm.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CBE724251CB8BF00435CBC /* AirportItlwm.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportItlwm.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CBE78F251CB8CA00435CBC /* AirportItlwm.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportItlwm.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BBCB4922F53433900B07F4B /* CrashFix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CrashFix.cpp; sourceTree = "<group>"; };
+		4BBCB4932F53433900B07F4B /* CrashFix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CrashFix.hpp; sourceTree = "<group>"; };
 		5076FA7F24CC71E40011B2BB /* FwBinary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FwBinary.cpp; sourceTree = "<group>"; };
 		5088ECB8252883BF0068A63D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5088ECB9252883C60068A63D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -1601,6 +1615,8 @@
 		F89B6BBA25021C9C000F77FF /* AirportItlwm */ = {
 			isa = PBXGroup;
 			children = (
+				4BBCB4922F53433900B07F4B /* CrashFix.cpp */,
+				4BBCB4932F53433900B07F4B /* CrashFix.hpp */,
 				F89B6BBB25021C9C000F77FF /* AirportItlwm.hpp */,
 				F89B6BBD25021C9C000F77FF /* AirportItlwm.cpp */,
 				F89B6BDC25022F8C000F77FF /* AirportSTAIOCTL.cpp */,
@@ -1885,6 +1901,7 @@
 				F84AD8C82A497DB200DC8DED /* IOSkywalkPacketBufferPool.h in Headers */,
 				F84AD8972A497DB200DC8DED /* IO80211InfraProtocol.h in Headers */,
 				F8C594DC25FD935B0007D19C /* ieee80211_ra.h in Headers */,
+				4BBCB49B2F53433900B07F4B /* CrashFix.hpp in Headers */,
 				F84AD8902A497DB200DC8DED /* IOSkywalkNetworkPacket.h in Headers */,
 				35CBE66F251CB89700435CBC /* apple80211_wps.h in Headers */,
 			);
@@ -1920,6 +1937,7 @@
 				F84AD8C62A497DB200DC8DED /* IOSkywalkPacketBufferPool.h in Headers */,
 				F84AD8952A497DB200DC8DED /* IO80211InfraProtocol.h in Headers */,
 				F8C594DA25FD935B0007D19C /* ieee80211_ra.h in Headers */,
+				4BBCB49F2F53433900B07F4B /* CrashFix.hpp in Headers */,
 				F84AD88E2A497DB200DC8DED /* IOSkywalkNetworkPacket.h in Headers */,
 				35CBE6D9251CB8BF00435CBC /* apple80211_wps.h in Headers */,
 			);
@@ -1955,6 +1973,7 @@
 				F84AD8C52A497DB200DC8DED /* IOSkywalkPacketBufferPool.h in Headers */,
 				F84AD8942A497DB200DC8DED /* IO80211InfraProtocol.h in Headers */,
 				F8C594D925FD935B0007D19C /* ieee80211_ra.h in Headers */,
+				4BBCB4992F53433900B07F4B /* CrashFix.hpp in Headers */,
 				F84AD88D2A497DB200DC8DED /* IOSkywalkNetworkPacket.h in Headers */,
 				35CBE744251CB8CA00435CBC /* apple80211_wps.h in Headers */,
 			);
@@ -1969,6 +1988,7 @@
 				F897ECBB266EFF93005EE8F7 /* IOSkywalkEthernetInterface.h in Headers */,
 				F84AD8982A497DB200DC8DED /* IO80211InfraProtocol.h in Headers */,
 				F84AD8A62A497DB200DC8DED /* IOSkywalkLogicalLink.h in Headers */,
+				4BBCB49C2F53433900B07F4B /* CrashFix.hpp in Headers */,
 				F84AD8912A497DB200DC8DED /* IOSkywalkNetworkPacket.h in Headers */,
 				F897ECBC266EFF93005EE8F7 /* apple80211_ioctl.h in Headers */,
 				F84AD8D72A497DB200DC8DED /* CCLogPipe.h in Headers */,
@@ -2027,6 +2047,7 @@
 				F84AD8C72A497DB200DC8DED /* IOSkywalkPacketBufferPool.h in Headers */,
 				F84AD8962A497DB200DC8DED /* IO80211InfraProtocol.h in Headers */,
 				F8C594DB25FD935B0007D19C /* ieee80211_ra.h in Headers */,
+				4BBCB4972F53433900B07F4B /* CrashFix.hpp in Headers */,
 				F84AD88F2A497DB200DC8DED /* IOSkywalkNetworkPacket.h in Headers */,
 				F89B6BC725021DED000F77FF /* apple80211_wps.h in Headers */,
 			);
@@ -2046,6 +2067,7 @@
 				F84AD8D82A497DB200DC8DED /* CCLogPipe.h in Headers */,
 				F8AE64FC285471560085B4CF /* IO80211P2PInterface.h in Headers */,
 				F84AD8A02A497DB200DC8DED /* CCPipe.h in Headers */,
+				4BBCB4952F53433900B07F4B /* CrashFix.hpp in Headers */,
 				F8AE64FD285471560085B4CF /* IO80211WorkLoop.h in Headers */,
 				F8AE64FE285471560085B4CF /* apple80211_var.h in Headers */,
 				F84AD8CA2A497DB200DC8DED /* IOSkywalkPacketBufferPool.h in Headers */,
@@ -2573,6 +2595,7 @@
 				35CBE676251CB89700435CBC /* AirportItlwmInterface.cpp in Sources */,
 				35CBE677251CB89700435CBC /* _string.c in Sources */,
 				35CBE678251CB89700435CBC /* ieee80211_ioctl.c in Sources */,
+				4BBCB49A2F53433900B07F4B /* CrashFix.cpp in Sources */,
 				35CBE679251CB89700435CBC /* ieee80211.c in Sources */,
 				35CBE67A251CB89700435CBC /* ieee80211_rssadapt.c in Sources */,
 				35CBE67B251CB89700435CBC /* ieee80211_input.c in Sources */,
@@ -2653,6 +2676,7 @@
 				35CBE6E0251CB8BF00435CBC /* AirportItlwmInterface.cpp in Sources */,
 				35CBE6E1251CB8BF00435CBC /* _string.c in Sources */,
 				35CBE6E2251CB8BF00435CBC /* ieee80211_ioctl.c in Sources */,
+				4BBCB49E2F53433900B07F4B /* CrashFix.cpp in Sources */,
 				35CBE6E3251CB8BF00435CBC /* ieee80211.c in Sources */,
 				35CBE6E4251CB8BF00435CBC /* ieee80211_rssadapt.c in Sources */,
 				35CBE6E5251CB8BF00435CBC /* ieee80211_input.c in Sources */,
@@ -2733,6 +2757,7 @@
 				35CBE74B251CB8CA00435CBC /* AirportItlwmInterface.cpp in Sources */,
 				35CBE74C251CB8CA00435CBC /* _string.c in Sources */,
 				35CBE74D251CB8CA00435CBC /* ieee80211_ioctl.c in Sources */,
+				4BBCB4982F53433900B07F4B /* CrashFix.cpp in Sources */,
 				35CBE74E251CB8CA00435CBC /* ieee80211.c in Sources */,
 				35CBE74F251CB8CA00435CBC /* ieee80211_rssadapt.c in Sources */,
 				35CBE750251CB8CA00435CBC /* ieee80211_input.c in Sources */,
@@ -2864,6 +2889,7 @@
 				F837C9222724577F00B2C499 /* coex.cpp in Sources */,
 				F897ED03266EFF93005EE8F7 /* tx.cpp in Sources */,
 				F897ED04266EFF93005EE8F7 /* hw.cpp in Sources */,
+				4BBCB49D2F53433900B07F4B /* CrashFix.cpp in Sources */,
 				F897ED05266EFF93005EE8F7 /* ItlIwn.cpp in Sources */,
 				F897ED06266EFF93005EE8F7 /* phy.cpp in Sources */,
 				F897ED07266EFF93005EE8F7 /* mac80211.cpp in Sources */,
@@ -2894,6 +2920,7 @@
 				F8CA44A325091AF60036119A /* AirportItlwmInterface.cpp in Sources */,
 				F89B6BF6250231E3000F77FF /* _string.c in Sources */,
 				F89B6BF7250231E3000F77FF /* ieee80211_ioctl.c in Sources */,
+				4BBCB4962F53433900B07F4B /* CrashFix.cpp in Sources */,
 				F89B6BF8250231E3000F77FF /* ieee80211.c in Sources */,
 				F89B6BF9250231E3000F77FF /* ieee80211_rssadapt.c in Sources */,
 				F89B6BFA250231E3000F77FF /* ieee80211_input.c in Sources */,
@@ -3025,6 +3052,7 @@
 				F8AE6542285471560085B4CF /* coex.cpp in Sources */,
 				F8AE6543285471560085B4CF /* tx.cpp in Sources */,
 				F8AE6544285471560085B4CF /* hw.cpp in Sources */,
+				4BBCB4942F53433900B07F4B /* CrashFix.cpp in Sources */,
 				F8AE6545285471560085B4CF /* ItlIwn.cpp in Sources */,
 				F8AE6546285471560085B4CF /* phy.cpp in Sources */,
 				F8AE6547285471560085B4CF /* mac80211.cpp in Sources */,
@@ -3395,6 +3423,7 @@
 		024A07B723FCBC3C009FBA6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 2.4.1;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = itlwm/PrivateSPI.pch;
@@ -3422,6 +3451,7 @@
 		024A07B823FCBC3C009FBA6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 2.4.1;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = itlwm/PrivateSPI.pch;
