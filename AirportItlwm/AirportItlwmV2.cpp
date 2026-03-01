@@ -300,12 +300,6 @@ bool AirportItlwm::start(IOService *provider)
         releaseAll();
         return false;
     }
-    if (!fNetIf->initRegistrationInfo(&registInfo, 1, sizeof(registInfo))) {
-        XYLog("initRegistrationInfo fail\n");
-        super::stop(provider);
-        releaseAll();
-        return false;
-    }
     fNetIf->mExpansionData->fRegistrationInfo = (struct IOSkywalkNetworkInterface::RegistrationInfo *)IOMalloc(sizeof(struct IOSkywalkNetworkInterface::RegistrationInfo));
     fNetIf->mExpansionData2->fRegistrationInfo = (struct IOSkywalkEthernetInterface::RegistrationInfo *)IOMalloc(sizeof(struct IOSkywalkEthernetInterface::RegistrationInfo));
     memcpy(fNetIf->mExpansionData->fRegistrationInfo, &registInfo, sizeof(registInfo));
