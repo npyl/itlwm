@@ -801,10 +801,9 @@ getRATE_SET(OSObject *object, struct apple80211_rate_set_data *ad)
         ad->num_rates = ic->ic_bss->ni_rates.rs_nrates;
         size_t size = min(ic->ic_bss->ni_rates.rs_nrates, ARRAY_SIZE(ad->rates));
         for (int i=0; i < size; i++) {
-            struct apple80211_rate apple_rate = ad->rates[i];
-            apple_rate.version = APPLE80211_VERSION;
-            apple_rate.rate = ic->ic_bss->ni_rates.rs_rates[i];
-            apple_rate.flags = 0;
+            ad->rates[i].version = APPLE80211_VERSION;
+            ad->rates[i].rate = ic->ic_bss->ni_rates.rs_rates[i];
+            ad->rates[i].flags = 0;
         }
         return kIOReturnSuccess;
     }
